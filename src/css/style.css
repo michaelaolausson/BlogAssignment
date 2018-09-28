@@ -1,0 +1,608 @@
+/*** Michaela Olausson HT2016 ***/
+/* background grey #373737, div background paper white #F4F4F4, divTop background red #E45f56*/
+body 
+{
+	background-color:#373737;
+	font-family: 'Crimson Text', serif;
+}
+#wrapper 
+{
+	margin:0 auto;
+	width: 1000px;
+	float:none;
+}
+header 
+{
+	color:#E45F56;
+	background-color:#1d1d1d;
+	float:left;
+	width:960px;
+	clear:both;
+	float:left;
+	height:120px;
+	box-shadow: black 5px 5px 20px;
+	margin-bottom:30px;
+	margin-top:40px;
+	z-index:1;
+	text-align:center;
+}
+header h1 
+{
+	margin-left:20px;
+	font-size:70px;
+	margin-top:60px;
+	line-height:0;
+	color:#f4f4f4;
+	text-shadow:#000000 2px 2px;
+}
+nav 
+{
+	position:relative;
+	background-color:#1d1d1d;
+	width:920px;
+	height:40px;
+	margin-right:40px;
+	float:left;
+	margin-bottom:30px;
+	box-shadow: black 5px 5px 20px;
+	padding-right:40px;
+	padding-top:20px;
+
+}
+nav li
+{
+	display:inline;
+}
+nav li a 
+{
+	line-height:0;
+	color:#f4f4f4;
+	font-size:90px;
+	text-decoration:none;
+	font-weight: bold;
+	text-shadow:2px 2px black;
+}
+nav li a:hover
+{
+	color:#eeef85;
+}
+a
+{
+	text-decoration:none;
+}
+#this_page 
+{
+	color:#e45f56;
+}
+#this_page:hover 
+{
+	color:#eeef85;
+}
+/* --- SIGNED IN NAV --- */
+#signed_in_nav 
+{
+	padding:10px;
+	padding-right:30px;
+
+}
+#signed_in_nav a 
+{
+	font-size: 20px;
+	margin-right: 50px;
+}
+.forward_btn 
+{
+	position:absolute;
+	top:30px;
+	right:20px;
+	z-index:2;
+	text-shadow:2px 2px black;
+	text-shadow:2px 2px black;
+}
+.forward_btn_disabled
+{
+	position:absolute;
+	top:30px;
+	right:20px;
+	z-index:2;
+	color:#777777;
+	pointer-events: none;
+   	cursor: default;	
+   	float:right;
+}
+.back_btn 
+{
+	position:absolute;
+	top:30px;
+	left:20px;
+	z-index:2;
+}
+
+.back_btn_disabled
+{
+	position:absolute;
+	top:30px;
+	left:20px;
+	z-index:2;
+	color:#777777;
+	pointer-events: none;
+   	cursor: default;
+}
+.pageNumber
+{
+	color:#f4f4f4;
+	vertical-align:middle;
+	margin:0 auto;
+	padding:0;
+	text-align: center;
+	width:960px;
+	position:absolute;
+	top:20px;
+	z-index:0;
+	font-size:20px;
+	text-shadow:2px 2px black;
+}
+#index_nav
+{
+	padding-top:30px;
+}
+#index_nav a
+{
+	font-weight:normal;
+	text-shadow:none;
+	height:40px;
+}
+#index_nav ul
+{
+	margin:0;
+}
+div 
+{
+	padding:0;
+	position: relative;
+	width:960px;
+	margin-right:40px;
+	color:#373737;
+	background-color:#F4F4F4;
+	float:left;
+}
+div p 
+{
+	margin-left:30px;
+	margin-top:30px;
+}
+#article_view p 
+{
+	margin-left:100px;
+	margin-right:100px;
+	padding-top:0px;
+}
+#author
+{
+	font-size:30px;
+}
+.container 
+{	
+	box-shadow: black 5px 5px 20px;
+	margin-bottom:40px;
+}
+/* index --- artikelsida --- */
+.index_container
+{
+	position:relative;
+	box-shadow: black 5px 5px 20px;
+	width:300px;
+	margin-right:30px;
+	margin-bottom:30px;
+	margin-bottom:50px;
+	float:left;
+}
+.overview_container
+{
+	position:relative;
+	box-shadow: black 5px 5px 20px;
+	width:300px;
+	margin-right:30px;
+	margin-bottom:30px;
+	margin-bottom:30px;
+	float:left;
+}
+.articleDiv 
+{
+	position:relative;
+	background-color:#F4F4F4;
+	width:270px;
+	height:80px;
+	overflow:hidden;
+	float:left;
+	padding:15px;
+}
+.articleDiv p
+{
+	margin-top:20px;
+
+}
+.articleTop button /*read more button*/
+{
+	font-family: 'Crimson Text', serif;
+	background-color:#1d1d1d;
+	color:#f4f4f4;
+	margin:0 auto; 
+	float:none;
+	border:none;
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:100%;
+	padding-left:10px;
+	padding-right:10px;
+	z-index:4;
+	font-size:15px;
+	text-decoration:none;
+}
+.articleTop button:hover 
+{
+	background-color:#373737;
+}
+/*articleTop background color depends on category*/
+.articleTop 
+{
+	background-color:#4AAAA5;
+	height:45px;
+	width:100%;
+	margin-bottom:0px;
+	box-shadow:none;
+	padding-top:5px;
+	padding-bottom:10px;
+	position:relative;
+	z-index:1;
+}
+.articleTop h3 
+{
+	font-family: 'Crimson Text', serif;
+	line-height:0;
+	margin-left:20px;
+	color:#000;
+	font-weight:bold;
+}
+/* -- time + sign -- appears on all article listnings with articleTop-- */
+.timesign 
+{
+	line-height:0;
+	margin:0;
+	margin-left:20px;
+	padding:0;
+	font-size:12px;
+}
+#articleTop_edu
+{
+	background-color: #7accc8;
+} 
+#articleTop_entertainment 
+{
+	background-color: #a3d39c;
+}
+#articleTop_sport
+{
+	background-color: #e45f56;
+}
+.articleBottom
+{
+	height:30px;
+	width:100%;
+	margin-bottom:0px;
+	box-shadow:none;
+	padding-top:5px;
+	padding-bottom:10px;
+}
+#articleBottom_edu
+{
+	background-color: #7accc8;
+}
+#articleBottom_entertainment
+{
+	background-color: #a3d39c;
+}
+#articleBottom_sport
+{
+	background-color: #e45f56;
+}
+.articleBottom h4
+{
+	line-height:0;
+	color: #1d1d1d;
+	font-size:15px;
+	text-align:right;
+	margin-right:10px;
+}
+.divTop 
+{
+	font-family: 'Crimson Text', serif;
+	background-color: #777777;
+	color:#f4f4f4;
+	padding-bottom:10px;
+	box-shadow: none;
+	text-shadow: #000000 1px 1px;
+}
+.divTop h2 
+{
+	font-size:50px;
+	line-height:0;
+	margin-left:30px;
+	margin-top:50px;
+}
+/* --- LOG IN --- */
+#log_in_div
+{
+	width:960px;
+	background-color:#373737;
+	vertical-align:center;
+	float:none;
+	margin:0 auto;
+	box-shadow: #373737 2px 2px 5px;
+}
+#log_in_form
+{
+	display:table;
+	margin:0 auto;
+	vertical-align:center;
+	color:#F4F4F4;
+	text-align:center;
+	font-size:20px;
+	font-family:'Quicksand', sans-serif;
+	padding-top:50px;
+	padding-bottom:50px;
+	text-shadow:3px 1px black;
+}
+#log_in_form input 
+{
+	font-size:30px;
+	text-align:center;
+	width:300px;
+	height:50px;
+	border:none;
+	margin-top:20px;
+	margin-bottom:20px;
+	box-shadow: #000000 2px 2px 5px;
+}
+#log_in_submit
+{
+	background-color:#419e99;
+	color:#373737;
+	font-family:'Quicksand', sans-serif;
+	font-weight:bold;
+	text-shadow:1px 1px black;
+}
+#log_in_submit:hover
+{
+	background-color:#7accc8;
+}
+/* --- edit article page --- */
+
+/* form style --- article form */
+form {
+	padding-top:30px;
+}
+.article_form 
+{
+	font-size:25px;
+	width:500px;
+	display:block;
+	margin:0 auto;
+	padding-top:20px;
+
+}
+.article_form label 
+{
+	font-weight:bold;
+}
+.article_form input 
+{
+	font-family: 'Crimson Text', serif;
+	margin-bottom:20px;
+	margin-top:20px;
+	font-size:25px;
+	width:100%;
+	height:40px;	
+	border:none;
+	box-shadow: #373737 2px 2px 5px;
+	padding-left:10px;
+}
+.article_form select 
+{
+	padding-left:10px;
+	font-family: 'Crimson Text', serif;
+	height:40px;
+	width:80%;
+	font-size: 20px;
+	border:none;
+	margin-bottom:20px;
+	margin-top:20px;
+	box-shadow: #373737 2px 2px 5px;
+}
+.article_form textarea 
+{
+	font-family: 'Crimson Text', serif;
+	font-size:20px;
+	width:490px;
+	border:none;
+	box-shadow: #373737 2px 2px 5px;
+	height:500px;
+	overflow:auto;
+	padding:10px;
+	margin-bottom:20px;
+	margin-top:20px;
+}
+#content_input 
+{
+	height:500px;
+}
+.article_form .radio_btn 
+{
+  width:20px;
+  background-color:none;
+  box-shadow:none;
+  margin-right:60px;
+  margin-left:10px;
+  vertical-align:middle;
+  cursor:pointer;
+  display:inline-block;
+}
+#radioDiv 
+{
+	margin:0 auto;
+	width:auto;
+	float:none;
+}
+#submit_img 
+{
+	background-color:#4aaaa5;
+}
+#submit_img:hover 
+{
+	background-color:#255552;
+}
+#submitBtn 
+{
+	background-color:#67a55e;
+	color:#F4F4F4;
+	font-weight: bold;
+	font-size: 25px;
+}
+#submitBtn:hover 
+{
+	background-color:#a3d39c;
+}
+.submit
+{
+	line-height:0;
+	padding:30px;
+	text-align:center;
+	border-radius:10px;
+	width:250px;
+	margin-top:0;
+	cursor:pointer;
+
+}
+#deleteBtn
+{
+	background-color:#e45f56;
+}
+#deleteBtn:hover
+{
+	color:#ffffff;
+	background-color:#880900;
+}
+.infotext
+{
+	text-align: center;
+	margin-top:0;
+}
+/* article page */
+.article_content
+{                                
+	margin:40px;
+	margin-top:20px;
+	font-size: 25px;
+
+}
+.btn
+{
+	background-color:#E45F56;
+	color:#F4F4F4;
+	font-weight: bold;
+	font-size: 25px;
+	padding:20px;
+	text-align:center;
+	padding:20px;
+	border-radius:10px;
+	width:250px;
+	text-decoration:none;
+	width:200px;
+	float:left;
+	box-shadow: #373737 2px 2px 5px;
+	text-shadow:#000000 1px 1px;
+	margin:20px;
+	font-family:'Quicksand', sans-serif;
+
+}
+.btn:hover
+{
+	background-color:#7e3732;
+}
+#confirm_btn
+{
+	background-color:#4aaaa5;
+	color:#F4F4F4;
+	float:right;
+}
+#confirm_btn:hover
+{
+	background-color:#255552;
+}
+#logoutBtn 
+{	
+	text-align:center;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:30px;
+	width:60px;
+	background-color:#373737;
+	padding:10px;
+	color:#f4f4f4;
+	border-radius:5px;
+	text-decoration: none;
+	box-shadow: #000000 2px 2px 5px;
+
+}
+/* --- OVERVIEW -- ALL ARTICLES --- */
+.edit_btn 
+{
+	font-family: 'Crimson Text', serif;
+	background-color:#35404f;
+	color:#f4f4f4;
+	margin:0 auto; 
+	float:none;
+	border:none;
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:100%;
+	padding-left:10px;
+	padding-right:10px;
+	z-index:4;
+	font-size:15px;
+
+}
+/* footer */
+footer 
+{
+	float:left;
+	margin-bottom:50px;
+	margin-right:40px;
+	width:960px;
+	background-color:#1d1d1d;
+	box-shadow: black 5px 5px 20px;
+	height:85px;
+	text-align:center;
+}
+footer p 
+{	
+	color:#777777;
+	font-size:20px;
+	margin:0;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:0;
+	text-shadow:#000000 1px 1px;
+	font-weight:bold;
+}
+footer a {
+	color:#000000;
+	text-decoration:none;
+	font-weight:bold;
+}
+footer a:hover {
+	color:#f4f4f4;
+}
